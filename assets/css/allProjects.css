@@ -1,0 +1,54 @@
+.section_grid{
+    position: relative;
+    padding-top: 75px;
+}
+.section_grid .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+.section_grid .box-container .box{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: .9rem;
+    height: 30rem;
+    border-radius: .5rem;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    cursor: pointer;
+}
+.section_grid .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    border-radius: .5rem;
+}
+.section_grid .box-container .box:hover img{
+    transform: scale(.5) translateY(-3rem);
+}
+.section_grid .box-container .box h3{
+    font-size: 1.4rem;
+    position: absolute;
+    top: -6rem; left: 50%;
+    transform: translateX(-50%);
+    transition: .2s linear;
+    text-transform: uppercase;
+}
+.section_grid .box-container .box:hover h3{
+    top: 2rem;
+}
+.section_grid .box-container .box .btn{
+    position: absolute;
+    bottom: -6rem; left: 50%;
+    transform: translateX(-50%);
+    margin-top: auto;
+    width: 73%;
+}
+.section_grid .box-container .box:hover .btn{
+    bottom: 2rem;
+}
